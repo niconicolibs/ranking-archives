@@ -12,11 +12,11 @@ This repository stores the historical ranking data of NicoNicoDouga from when ra
 .
 ├─ legacy
 │　 ├ total
-│　 │ └ {type}
-│　 │ 　 └ {category}.json
+│　 │ └ {l_type}
+│　 │ 　 └ {l_category}.json
 │　 └ daily
-│　 　 └ {category}
-│　 　 　 └ {type}
+│　 　 └ {l_category}
+│　 　 　 └ {l_type}
 │　 　 　 　 └ {year}
 │　 　 　 　 　 └ {month}
 │　 　 　 　 　 　 └ {date}.json
@@ -25,12 +25,25 @@ This repository stores the historical ranking data of NicoNicoDouga from when ra
 ``` 
 
 ### Variables
-- `type`
+- `l_type`
 
-   `fav`, `view`, `comment`, or `mylist` which means the aggregation method of ranking
-- `category`
+   `fav`, `view`, `comment`, or `mylist` which means the aggregation method of legacy(old) ranking
+- `l_category`
 
-   Category of NicoNicoDouga
+   Categories in NicoNicoDouga on legacy(old) ranking
+   ```python
+   categorys = [
+     "all",
+     "g_ent2", "ent", "music", "sing", "play", "dance", "vocaloid", "nicoindies", "asmr", "mmd", "virtual",
+     "g_life2", "animal", "cooking", "nature", "travel", "sport", "lecture", "drive", "history", "train",
+     "g_tech", "science", "tech", "handcraft", "make",
+     "g_politics",
+     "g_culture2", "anime", "game", "jikkyo", "toho", "imas", "radio", "draw", "trpg",
+     "g_other", "are", "diary", "other",
+     "g_r18",
+     "que", "chat", "test", "owner", "commons", "hitokoto", "fashion", "g_ent", "g_life", "g_try", "g_culture", "g_popular"
+   ]
+   ```
 - `year`, `month` and `date`
 
    The date the ranking was compoled

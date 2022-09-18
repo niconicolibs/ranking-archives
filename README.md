@@ -28,8 +28,8 @@ This repository stores the historical ranking data of NicoNicoDouga from when ra
 - `type`
 
    `fav`, `view`, `comment`, or `mylist` which means the aggregation method of ranking
-- `category
-`
+- `category`
+
    Category of NicoNicoDouga
 - `year`, `month` and `date`
 

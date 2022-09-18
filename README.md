@@ -10,8 +10,9 @@ This repository stores the historical ranking data of NicoNicoDouga from when ra
 
 ## Update
 Repository data update status
-|----|------|
+
 |Name|Status|
+|----|------|
 |legacy|![Status](https://img.shields.io/static/v1?label=Status&message=All%20done&color=success&style=flat-square&logo=github)|
 |current|![Status](https://img.shields.io/static/v1?label=Status&message=None&color=inactive&style=flat-square&logo=github)|
 |now|![Status](https://img.shields.io/github/workflow/status/niconicolibs/ranking-archives/getNowRanking?style=flat-square)|
@@ -59,12 +60,12 @@ Repository data update status
      "que", "chat", "test", "owner", "commons", "hitokoto", "fashion", "g_ent", "g_life", "g_try", "g_culture", "g_popular"
    ]
    ```
-- `year`, `month` and `date`
+- `year`, `month`, and `date`
 
    The date the ranking was compoled
 - `n_type`
 
-   `daily`, `weekly`, `monthly` or `total` which means the aggregation span of current(new) ranking
+   `daily`, `weekly`, `monthly`, or `total` which means the aggregation span of current(new) ranking
 - `n_genre` and `n_tagIndex`
 
    `n_genre` and `n_tagIndex` are detailed in `file_name_list.json` in the same directory. The former is the name of the genre subject to aggregation, and the latter is the index number of the popular tag associated with it. The relationship between index number and tag name is described in `file_name_list.json`. The relationship between index number and tag name is not kept for each day. Also, not all the same genres and tags exist.

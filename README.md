@@ -6,6 +6,15 @@ This repository stores the historical ranking data of NicoNicoDouga from when ra
 - Data in this repository are not guaranteed to be complete.
 - The administrator does not take any responsibility for using the data in this repository.
 - Do not contact the Nicovideo regarding the contacts of this repository.
+- This repository stores an archive in case Nicovideo disappears or the past ranking logs are no longer available.
+
+## Update
+Repository data update status
+|----|------|
+|Name|Status|
+|legacy|![Status](https://img.shields.io/static/v1?label=Status&message=All%20done&color=success&style=flat-square&logo=github)|
+|current|![Status](https://img.shields.io/static/v1?label=Status&message=None&color=inactive&style=flat-square&logo=github)|
+|now|![Status](https://img.shields.io/github/workflow/status/niconicolibs/ranking-archives/getNowRanking?style=flat-square)|
 
 ## Directory structure
 ```

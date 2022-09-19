@@ -31,13 +31,19 @@ Repository data update status
 │　 　　 　　 　　 　　 └─ {month}
 │　 　　 　　 　　 　　 　　 └─ {date}.json
 └─ ranking
-　　 └─ {n_type}
+　　 ├─ {n_type(weekly, daily, or total)}
+　　 │　 └─ {year}
+　　 │　 　　 └─ {month}
+　　 │　 　　 　　 └─ {n_date}
+　　 │　 　　 　　 　　 ├─ file_name_list.json
+　　 │　 　　 　　 　　 ├─ {n_genre}.json
+　　 │　 　　 　　 　　 └─ {n_genre}_{n_tagIndex}.json
+　　 └─ {n_type(monthly)}
 　　 　　 └─ {year}
-　　 　　 　　 └─ {month}
-　　 　　 　　 　　 └─ {n_date}
-　　 　　 　　 　　 　　 ├─ file_name_list.json
-　　 　　 　　 　　 　　 ├─ {n_genre}.json
-　　 　　 　　 　　 　　 └─ {n_genre}_{n_tagIndex}.json
+　　 　　 　　 └─ {n_date}
+　　 　　 　　 　　 ├─ file_name_list.json
+　　 　　 　　 　　 ├─ {n_genre}.json
+　　 　　 　　 　　 └─ {n_genre}_{n_tagIndex}.json
 ``` 
 
 ### Variables

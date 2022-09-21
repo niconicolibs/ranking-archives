@@ -1,6 +1,9 @@
 # Nicovideo Ranking Archives
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/niconicolibs/ranking-archives?logo=github&style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/niconicolibs/ranking-archives?logo=github&style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/niconicolibs/ranking-archives?logo=github&style=flat-square)
+![Status](https://img.shields.io/github/workflow/status/niconicolibs/ranking-archives/get-ranking?style=flat-square&logo=github)
 
 This repository stores the historical ranking data of NicoNicoDouga from when ranking data began to be provided to now.
 

@@ -14,8 +14,8 @@ Repository data update status
 |Name|Status|
 |----|------|
 |legacy|![Status](https://img.shields.io/static/v1?label=Status&message=All%20done&color=success&style=flat-square&logo=github)|
-|current|![Status](https://img.shields.io/static/v1?label=Status&message=None&color=inactive&style=flat-square&logo=github)|
-|now|![Status](https://img.shields.io/github/workflow/status/niconicolibs/ranking-archives/getNowRanking&style=flat-square&logo=github)|
+|current|![Status](https://img.shields.io/static/v1?label=Status&message=2020&color=inactive&style=flat-square&logo=github)|
+|now|![Status](https://img.shields.io/github/workflow/status/niconicolibs/ranking-archives/getTodayRanking&style=flat-square&logo=github)|
 
 ## Directory structure
 ```
@@ -42,7 +42,7 @@ Repository data update status
 　　 　　 └─ {year}
 　　 　　 　　 └─ {n_date}
 　　 　　 　　 　　 ├─ file_name_list.json
-　　 　　 　　 　　 ├─ {n_genre}.json
+　　 　　 　　 　　 └─ {n_genre}.json
 ``` 
 
 ### Variables

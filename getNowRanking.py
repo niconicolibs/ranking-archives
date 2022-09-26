@@ -11,6 +11,20 @@ req_url = "https://dcdn.cdn.nimg.jp/nicovideo/old-ranking/{}/{}/{}"
 TZ_JST = datetime.timezone(datetime.timedelta(hours=9))
 NOW = datetime.datetime.now(TZ_JST)
 
+GITHUB_USERNAME = "RankingCollectBot"
+GITHUB_REPO_OWNERNANE = "niconicolibs"
+GITHUB_REPO_NANE = "ranking-archives"
+PERSONAL_ACCESS_TOKEN = os.environ.get("PERSONAL_ACCESS_TOKEN")
+session = requests.Session()
+session.auth = (GITHUB_USERNAME, PERSONAL_ACCESS_TOKEN)
+issue_url = 'https://api.github.com/repos/%s/%s/issues' % (GITHUB_REPO_OWNERNANE, GITHUB_REPO_NANE)
+
+def sendIssue(titleDay, errorMes, statusCode):
+    session.post(issue_url, data=json.dumps({
+        "title": "[Failed] API request failed ({})".format(titleDay),
+        "body": "Date: {}\nStatusCode: {}\nError Log: \n```\n{}```".format(titleDay, statusCode, errorMes)
+    }).encode("utf-8"), headers={"Content-Type" : "application/json"})
+
 def downloadFiles(type):
     additionTimes = [""]
     if type == "daily" or type == "total":
@@ -20,11 +34,15 @@ def downloadFiles(type):
             req_url.format(type, NOW.strftime("%Y-%m-%d")+additionTime, "file_name_list.json"),
             headers=HEADERS
         )
+        if name_list_res.status_code != 200:
+            sendIssue(NOW.strftime("%Y-%m-%d")+additionTime, name_list_res.status_code, name_list_res.text)
+            continue
         try:
             name_list_res.json()
         except:
-            print("NotFound _05 ({}/{})".format(type,dt.strftime("%Y-%m-%d")))
-            break
+            print("NotFound {} ({}/{})".format(additionTime,type,NOW.strftime("%Y-%m-%d")))
+            sendIssue(NOW.strftime("%Y-%m-%d")+additionTime, name_list_res.status_code, name_list_res.text)
+            continue
         currentFolder = ""
         if type == "monthly" or type == "weekly":
             currentFolder = "./ranking/{}/{}/{}/".format(type, NOW.strftime("%Y"), NOW.strftime("%Y-%m-%d")+additionTime)

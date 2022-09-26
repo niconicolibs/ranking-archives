@@ -11,7 +11,7 @@ req_url = "https://dcdn.cdn.nimg.jp/nicovideo/old-ranking/{}/{}/{}"
 
 currentFolder = "./ranking/{}/{}/{}/"
 
-dt = datetime.datetime.strptime("2019-06-17", "%Y-%m-%d")
+dt = datetime.datetime.strptime("2022-09-26", "%Y-%m-%d")
 
 while True:
     print("Start:{}".format(currentFolder.format("weekly", dt.year, dt.strftime("%Y-%m-%d"))))
@@ -36,7 +36,7 @@ while True:
     os.system("git commit -m \"{}\"".format("add: ranking data (current/weekly/{})".format(dt.strftime("%Y-%m-%d"))))
     dt = dt + relativedelta(weeks=1)
     time.sleep(5)
-    if dt > datetime.datetime.strptime("2022-09-19", "%Y-%m-%d"):
+    if dt > datetime.datetime.strptime("2022-09-26", "%Y-%m-%d"):
         os.system("git push")
         break
 

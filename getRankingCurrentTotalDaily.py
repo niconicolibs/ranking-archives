@@ -9,7 +9,7 @@ HEADERS = {
 
 req_url = "https://dcdn.cdn.nimg.jp/nicovideo/old-ranking/{}/{}/{}"
 
-dt = datetime.datetime.strptime("2019-12-24", "%Y-%m-%d")
+dt = datetime.datetime.strptime("2022-09-20", "%Y-%m-%d")
 
 while True:
     print("Start:{}".format(dt.strftime("%Y-%m-%d")))
@@ -43,6 +43,6 @@ while True:
     os.system("git commit -m \"{}\"".format("add: ranking data (current/total,daily/{})".format(dt.strftime("%Y-%m-%d"))))
     os.system("git push")
     dt = dt + relativedelta(days=1)
-    if dt > datetime.datetime.strptime("2022-09-19", "%Y-%m-%d"):
+    if dt > datetime.datetime.strptime("2022-09-26", "%Y-%m-%d"):
         break
 

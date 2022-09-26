@@ -3,7 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/niconicolibs/ranking-archives?logo=github&style=flat-square)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/niconicolibs/ranking-archives?logo=github&style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/niconicolibs/ranking-archives?logo=github&style=flat-square)
-![Status](https://img.shields.io/github/workflow/status/niconicolibs/ranking-archives/get-ranking?style=flat-square&logo=github)
+![Status](https://img.shields.io/github/workflow/status/niconicolibs/ranking-archives/get-ranking?style=flat-square&logo=github&label=Status)
 
 This repository stores the historical ranking data of NicoNicoDouga from when ranking data began to be provided to now.
 
@@ -19,7 +19,7 @@ Repository data update status
 |Name|Status|
 |----|------|
 |legacy|![Status](https://img.shields.io/static/v1?label=Status&message=All%20done&color=success&style=flat-square&logo=github)|
-|current|![Status](https://img.shields.io/static/v1?label=Status&message=2020&color=inactive&style=flat-square&logo=github)|
+|current|![Status](https://img.shields.io/static/v1?label=Status&message=~2022-09-26&color=success&style=flat-square&logo=github)|
 |now|![Status](https://img.shields.io/github/workflow/status/niconicolibs/ranking-archives/get-ranking?style=flat-square&logo=github&label=Status)|
 
 ## Directory structure

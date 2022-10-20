@@ -1,8 +1,8 @@
 name: get-ranking
 
 on:
-  schedule:
-    - cron: '45 21 * * *'
+  #schedule:
+    #- cron: '45 21 * * *'
   workflow_dispatch:
 
 jobs:
